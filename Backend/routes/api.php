@@ -38,4 +38,8 @@ Route::post('/resetpassword',[ResetController::class, 'resetpassword']);
 Route::middleware('auth:sanctum')->get('/user',[Usercontroller::class, 'user']);
 
 // Current user route
+// It will work after refresh the page
 Route::middleware('auth:sanctum')->post('/logout',[AuthController::class, 'logout']);
+// It will work with refresh the page
+Route::post('/logout',[AuthController::class, 'logout']);
+
